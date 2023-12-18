@@ -1,0 +1,83 @@
+///USUARIOS
+### Agregar usuario
+POST ${process.env.REACT_APP_SERVER_URL}/usuarios/crear
+Content-Type: application/json
+
+{
+  "email": "asbd@gmail.com",
+  "password": "contrasena123",
+  "nombre": "Juan",
+  "apellido": "Pérez"
+}
+
+### Obtener Usuario
+GET ${process.env.REACT_APP_SERVER_URL}/usuarios/obtener/nuevo@email.com
+
+### Actualizar Usuario
+PUT ${process.env.REACT_APP_SERVER_URL}/usuarios/actualizar/nuevo@email.com
+Content-Type: application/json
+
+{
+  "nombre": "Juan Carlos",
+  "apellido": "Gómez",
+  "password": "nuevaContraseña",
+}
+
+### Borrar Usuario
+DELETE ${process.env.REACT_APP_SERVER_URL}/usuarios/borrar/nuevo@email.com
+
+
+///PRODUCTOS
+
+### Agregar Producto
+POST ${process.env.REACT_APP_SERVER_URL}/productos/crear
+Content-Type: application/json
+
+{
+  "nombreProducto": "Camisa",
+  "talla": "M",
+  "marca": "Marca X",
+  "cantidad": 10,
+   "precio": 29.99
+}
+### Obtener Producto
+GET ${process.env.REACT_APP_SERVER_URL}/productos/obtener/Nueva Camisa
+
+### Obtener todos
+GET ${process.env.REACT_APP_SERVER_URL}/productos/obtenertodos
+
+### Actualizar Producto
+PUT ${process.env.REACT_APP_SERVER_URL}/productos/actualizar/Camisa
+Content-Type: application/json
+
+{ 
+  "nombreProducto": "Nueva Camisa",
+  "talla": "L",
+  "marca": "Nueva Marca",
+  "cantidad": 15,
+   "precio": 9.99
+}
+
+### Borrar Producto
+DELETE ${process.env.REACT_APP_SERVER_URL}/productos/borrar/Nueva Camisa
+
+/// Ventas
+
+### Agregar ventas
+POST ${process.env.REACT_APP_SERVER_URL}/ventas/crear
+Content-Type: application/json
+
+{
+  "Usuario": "654b204521b244bf63f33d54",
+  "Producto": "654b3c02dd40faf06ccef9b0"
+}
+
+
+### Obtener ventas
+GET ${process.env.REACT_APP_SERVER_URL}/ventas/obtener/654b3d69166b390080b68466
+
+### Obtener Todas
+GET ${process.env.REACT_APP_SERVER_URL}/ventas/obtenertodas
+
+### Borrar venta
+DELETE ${process.env.REACT_APP_SERVER_URL}/ventas/borrar/654b3cf1166b390080b6844d
